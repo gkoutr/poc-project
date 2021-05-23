@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  fearlesspoc:
+    image: ${DOCKER_REGISTRY-}fearlesspoc
+    build:
+      context: .
+      dockerfile: FearlessPOC/Dockerfile
+    ports:
+      - "3000:443"
